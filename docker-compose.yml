@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  file-monitor:
+    build: .
+    volumes:
+      - ./source:/data/source
+      - ./destination:/data/destination
+    environment:
+      - SOURCE_DIR=/data/source
+      - DESTINATION_DIR=/data/destination
+    restart: unless-stopped
