@@ -1,6 +1,7 @@
 services:
-  file-monitor:
-    build: .
+  dirwatcher:
+    image: jogojapan/dirwatcher:1.0
+    container_name: dirwatcher
     volumes:
       - ./source:/data/source
       - ./destination:/data/destination
